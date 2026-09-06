@@ -1,0 +1,42 @@
+{
+  "name": "@interviewsage/mcp",
+  "version": "0.1.0",
+  "description": "面面星（InterviewSage）MCP server —— 求职辅导 AI 工具。薄 relay：只做工具声明 + HTTP 转发 + 鉴权，核心业务逻辑全部在服务端。",
+  "type": "module",
+  "bin": {
+    "mcp-server": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "求职",
+    "面试",
+    "简历",
+    "career",
+    "holland"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "interviewsage": {
+      "command": "npx",
+      "args": ["-y", "@interviewsage/mcp"],
+      "env": {
+        "INTERVIEWSAGE_API_KEY": "mmx_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INTERVIEWSAGE_BASE_URL": "https://www.interviewsage.cn"
+      }
+    }
+  }
+}
