@@ -1,13 +1,15 @@
-# 面面星 MCP Server
+# 面面星 MCP Server · InterviewSage MCP
 
-### InterviewSage MCP — AI 求职辅导工具，直连你常用的 AI 助手
+> AI 求职辅导工具 · AI-powered job-search assistant for the Model Context Protocol
 
 [![npm version](https://img.shields.io/npm/v/@interviewsage/mcp)](https://www.npmjs.com/package/@interviewsage/mcp)
 [![license](https://img.shields.io/npm/l/@interviewsage/mcp)](LICENSE)
 [![MCP](https://img.shields.io/badge/MCP-server-blue)](https://modelcontextprotocol.io)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-green)](https://nodejs.org)
 
-**InterviewSage MCP**（`@interviewsage/mcp`）是一个 [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server，把面面星（InterviewSage）的 **简历诊断、简历改写、岗位定制、面试押题、笔试真题、霍兰德职业测评** 等求职辅导能力，接入你日常使用的 AI 助手——**Claude Desktop、Cursor、腾讯 WorkBuddy** 等。从此你可以直接用自然语言让 AI 帮你写简历、刷笔试、练面试。
+**InterviewSage MCP** (`@interviewsage/mcp`) is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that brings **AI-powered job-search assistance** — resume diagnosis, resume rewriting, job tailoring, interview question prediction, written-test question banks, and Holland career assessment — directly into AI assistants like **Claude Desktop, Cursor, and Tencent WorkBuddy**. It turns plain-language requests (e.g. "帮我诊断这份简历") into professional, actionable job-hunting results.
+
+**面面星 MCP**（`@interviewsage/mcp`）是一个 [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server，把面面星（InterviewSage）的 **简历诊断、简历改写、岗位定制、面试押题、笔试真题、霍兰德职业测评** 等求职辅导能力，接入你日常使用的 AI 助手——**Claude Desktop、Cursor、腾讯 WorkBuddy** 等。从此你可以直接用自然语言让 AI 帮你写简历、刷笔试、练面试。
 
 > 面向人群：求职中的**应届生、社招转行者、想系统准备笔试面试的求职者**，以及希望把求职能力嵌入自己 AI 工作流的人。
 
@@ -128,39 +130,39 @@
 
 以下示例展示了你在 AI 助手里的典型用法。AI 会识别你的意图并自动调用对应工具。
 
-### 场景 1：简历诊断（免费试用）
+### 场景 1：简历诊断 Resume Diagnosis（免费试用）
 
 > **你**：这是我应届生的简历，帮我诊断一下有哪些问题、怎么改
 > （附上简历全文）
 >
 > **AI**（调用 `resume_diagnose`）：综合评分 68/100，五个维度分别是……主要问题有 3 点……建议……
 
-### 场景 2：简历改写（会员）
+### 场景 2：简历改写 Resume Rewriting（会员）
 
 > **你**：把我的实习经历用 STAR 法则改写，突出量化成果
 >
 > **AI**（调用 `resume_rewrite`）：改后把「负责 XX」改成了「通过 XX 动作，实现 XX 结果，提升 XX%」……
 
-### 场景 3：岗位定制（会员）
+### 场景 3：岗位定制 Job Tailoring（会员）
 
 > **你**：我投腾讯的产品经理岗，按这个 JD 定制我的简历
 > （附上 JD 全文）
 >
 > **AI**（调用 `resume_tailor`）：命中关键词「用户增长、数据分析、跨团队协作」……定制后简历突出这些匹配点……
 
-### 场景 4：面试押题（会员）
+### 场景 4：面试押题 Interview Prediction（会员）
 
 > **你**：我要面字节跳动的后端开发岗，帮我预测会被问什么题
 >
 > **AI**（调用 `interview_prediction`）：预测 8 道题，附参考答案、答题思路与可能追问……
 
-### 场景 5：笔试刷题（免费）
+### 场景 5：笔试刷题 Written-test Practice（免费）
 
 > **你**：帮我抽几道行测「数量关系」的题练练
 >
 > **AI**（调用 `interview_questions_bank`）：抽出 10 题（不含答案）……你作答后它判分并给出解析。
 
-### 场景 6：职业测评（免费）
+### 场景 6：职业测评 Career Assessment（免费）
 
 > **你**：帮我测测我适合什么职业方向
 >
@@ -170,7 +172,7 @@
 
 ## 工具详解
 
-| 工具名 | 功能 | 档位 | 解决什么痛点 |
+| 工具名 Tool | 功能 What it does | 档位 Tier | 解决什么痛点 |
 |---|---|---|---|
 | `health` | 连通性 + 权益回显 | 免费 | 验证 key 是否有效、当前套餐档位 |
 | `search_articles` | 求职干货检索 | 免费 | 关键词检索简历/面试/笔试/职业规划方法论文章，零 AI 成本 |
@@ -196,7 +198,7 @@
 | 腾讯 WorkBuddy | stdio（`~/.workbuddy/mcp.json`） | 国内 PC 端 AI 办公智能体 |
 | 其他 MCP 客户端 | stdio transport | 任何实现 MCP 协议的客户端均可 |
 
-> 远程（Streamable HTTP）接入方式已规划，届时无需本地 `npx` 即可直连，敬请期待。
+> 除 stdio 外，远程（Streamable HTTP）直连方式也在上线中，届时无需本地 `npx` 即可连接。
 
 ---
 
